@@ -21,5 +21,7 @@ const createGrid = function (qty) {
 
 window.addEventListener('DOMContentLoaded', createGrid);
 grid.addEventListener('mouseover', e => {
-    e.target.style.backgroundColor = 'darkslateblue';
+    if (e.target.classList.contains('box')) {
+        e.target.style.backgroundColor = 'darkslateblue';
+    }
 });
