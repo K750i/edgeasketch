@@ -14,11 +14,23 @@
     <header>
         <h1>Edge A Sketch</h1>
     </header>
-    <section class="option">
-        <label for="size">Grid Size</label>
-        <input type="text" id="size" name="size" value="8">
-    </section>
-    <div class="grid"></div>
+    <div class="wrapper">
+        <section class="options">
+            <div>
+                <label for="size">Grid Size (Max: 100)</label>
+                <input type="text" id="size" name="size"
+                    placeholder="e.g. 16 for a 16x16 grid" minlength="1"
+                    maxlength="3">
+            </div>
+            <div>
+                <input type="checkbox" id="chk">
+                <label for="chk" class="color">Color</label>
+            </div>
+        </section>
+        <div class="grid-wrapper">
+            <div class="grid"></div>
+        </div>
+    </div>
 </body>
 
 </html>
