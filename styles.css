@@ -33,13 +33,13 @@ header {
     background: #EEE3AB;
 }
 
-input {
-    background: #BA3F1D;
-}
+
 
 .grid {
     display: flex;
     flex-wrap: wrap;
+    width: 40vw;
+    height: 40vw;
     background: white;
     box-shadow: 0 0 10px hsla(0deg, 0%, 0%, 0.2);
 }
