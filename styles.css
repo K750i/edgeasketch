@@ -37,6 +37,19 @@ header {
     align-items: center;
 }
 
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+    height: 50vw;
+    background: white;
+    box-shadow: 0 0 10px hsla(0deg, 0%, 0%, 0.2);
+}
+
+.grid .box {
+    outline: 1px solid hsla(0, 0%, 75%, 0.2);
+}
+
 .options {
     background: #3B7080;
     flex: 1 0 auto;
@@ -53,7 +66,7 @@ header {
     text-align: center;
 }
 
-button {
+.button {
     border: none;
     background: #FCEC52;
     padding: 0.7em;
@@ -62,44 +75,14 @@ button {
     min-width: 80px;
 }
 
-button:hover {
+.button:hover {
     background: #ADE25D;
 }
 
 footer {
     padding-bottom: 10px;
     text-align: center;
-    color: white;
+    font-size: 0.8rem;
+    color: beige;
     background: #3B7080;
-}
-
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 40vw;
-    height: 40vw;
-    background: white;
-    box-shadow: 0 0 10px hsla(0deg, 0%, 0%, 0.2);
-}
-
-.grid .box {
-    outline: 1px solid hsla(0, 0%, 75%, 0.2);
-}
-
-#chk {
-    display: none;
-}
-
-.selected.color::after {
-    content: 'Random';
-    display: block;
-}
-
-.color {
-    cursor: pointer;
-}
-
-.color::after {
-    content: 'Black';
-    display: block;
 }

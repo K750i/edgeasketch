@@ -6,9 +6,8 @@ const grid = document.querySelector('.grid');
 const smallBtn = document.querySelector('.button.small');
 const mediumBtn = document.querySelector('.button.medium');
 const bigBtn = document.querySelector('.button.big');
+const colorBtn = document.querySelector('.button.color');
 const clearBtn = document.querySelector('.clear');
-const checkbox = document.querySelector('#chk')
-const colorText = document.querySelector('.color')
 const getRandomColor = function () {
     r = Math.floor(Math.random() * 256);
     g = Math.floor(Math.random() * 256);
@@ -35,12 +34,10 @@ const changeGrid = function (size) {
 
 window.addEventListener('DOMContentLoaded', function () {
     createGrid(16);
-    if (checkbox.checked) {
-        colorText.classList.add('selected');
+    if (colorBtn.firstChild.nodeValue === 'Random') {
         getRandomColor();
     }
     else {
-        colorText.classList.remove('selected');
         [r, g, b] = [0, 0, 0];
     }
 });
@@ -65,18 +62,18 @@ grid.addEventListener('mouseover', function (e) {
 });
 
 grid.addEventListener('mouseleave', function () {
-    if (checkbox.checked) {
+    if (colorBtn.firstChild.nodeValue === 'Random') {
         getRandomColor()
     }
 });
 
-checkbox.addEventListener('change', function () {
-    if (this.checked) {
-        colorText.classList.add('selected');
+colorBtn.addEventListener('click', function () {
+    if (this.firstChild.nodeValue === 'Black') {
+        this.firstChild.nodeValue = 'Random';
         getRandomColor();
     }
     else {
-        colorText.classList.remove('selected');
+        this.firstChild.nodeValue = 'Black';
         [r, g, b] = [0, 0, 0];
     }
 })
